@@ -16,7 +16,7 @@ const PostTitle = () => {
   }, [postNumber]);
 
   return (
-    <div>
+    <div className='flex gap-2'>
       <input
         type='number'
         min={1}
@@ -24,7 +24,7 @@ const PostTitle = () => {
         value={postNumber}
         onChange={(e) => setPostNumber(Number(e.target.value))}
       />
-      <div>
+      <div className='inline-block max-w-48 overflow-hidden align-top whitespace-nowrap text-ellipsis'>
         <span>{post?.title}</span>
       </div>
     </div>
